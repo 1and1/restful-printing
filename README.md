@@ -20,17 +20,11 @@ To use this, you'll need to
  * Install Restful Printing service on the server.
    * At the moment there's no fancy installer and such, just:
    * For Ubuntu you'll need the following:
-     * ``` sudo apt-get install build-essential checkinstall ruby1.9.1 ruby1.9.1-dev libcups2-dev libcurl4-openssl-dev```
+     * ```sudo apt-get install ruby ruby-dev bundler libcups2-dev libcurl4-openssl-dev```
    * Checkout the source from github and run ```bundle install```
    * Point your favorite rack webserver at the directory.  Tested with Puma and Passenger, but anything *should* work.
  * Send ZPL formatted text such as:
- ```
- ^XA
- ^LH30,30
- ^F020,10^AD^FDZEBRA^FS
- ^F020,60,B3^FDAAAAA01^FS
- ^X2
- ```
+  * ```^XA^BY8,0^FT124,209^BON,8,N,0,N,1,^FDYourTextHere^FS^XZ```
 
 
 The endpoints currently defined are:
