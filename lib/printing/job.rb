@@ -23,7 +23,6 @@ module Printing
         def state
             return @state unless @state.nil?
             pj = Cups::PrintJob.new( '', printer.name )
-            pj.job_id = job_id
             @state = pj.state
         end
 
