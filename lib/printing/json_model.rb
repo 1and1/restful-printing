@@ -1,13 +1,13 @@
 module Printing
 
-    class JsonModel
+  class JsonModel
 
-        include Virtus.model
+    include Virtus.model
 
-        def to_json(*a)
-            self.to_hash
-        end
-
+    def to_json(opts = {})
+      JSON.generate(self.to_hash)
     end
+
+  end
 
 end

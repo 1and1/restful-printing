@@ -11,8 +11,8 @@ end
 
 puts "Starting up RestfulPrinting, routes are: "
 Printing::API::routes.each do |rt|
-    puts ' * ' + rt.route_description + ':'
-    puts '   * ' + rt.route_method + ' ' + rt.route_path
+    puts ' * ' + rt.description + ':'
+    puts '   * ' + rt.request_method + ' ' + rt.path
     puts
 end
 run Printing::API
